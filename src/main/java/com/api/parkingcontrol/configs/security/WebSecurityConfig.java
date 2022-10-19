@@ -18,14 +18,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .httpBasic()
                 .and()
-                /*.authorizeHttpRequests()
-                .antMatchers(HttpMethod.GET, "/parking-spot/**").permitAll()
-                .antMatchers(HttpMethod.POST, "/parking-spot").hasRole("USER")
-                .antMatchers(HttpMethod.DELETE, "/parking-spot/**").hasRole("ADMIN")
+                .authorizeHttpRequests()
                 .anyRequest().authenticated()
                 .and()
-                .csrf().disable();*/
-                .authorizeHttpRequests()
-                .anyRequest().authenticated();
+                .csrf().disable();
+
     }
 }
